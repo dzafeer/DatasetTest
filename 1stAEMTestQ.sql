@@ -1,3 +1,5 @@
+-- 1st AEMTest Question
+
 SELECT WELL_BORE_CODE, --To differentiate different wellbore
 COUNT(WELL_BORE_CODE) AS recordCount,
 WELL_TYPE + ' ' + FLOW_KIND AS wellType,
