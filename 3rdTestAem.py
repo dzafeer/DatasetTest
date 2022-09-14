@@ -1,4 +1,5 @@
-from http.client import FOUND
+#3rd Question
+
 import urllib
 import pandas as pd
 import sqlalchemy as sa
@@ -11,7 +12,6 @@ params = urllib.parse.quote_plus("DRIVER={SQL Server Native Client 11.0};"
                                  "PWD=Test@123")
 engine = sa.create_engine("mssql+pyodbc:///?odbc_connect={}".format(params))
 
-# task for Question 3
 query = "SELECT top 1 text_sample from dbo.text_sample" 
 
 data = pd.read_sql(query, engine)
@@ -31,7 +31,7 @@ print(text)
 # x) Customized pattern, match phone number '.\d{4}.\d{7}'
 
 
-pattern = re.compile(r'[a-zA-Z]+')
+pattern = re.compile(r'age..\d{2}')
 
 matches = pattern.findall(text)
 
